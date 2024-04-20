@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ba4e4e;
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.qrcodeComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.qrcode-img {
+  background: linear-gradient(#6ddcf2, #c1dfe4);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.qrcode-img img {
+  width: 100%; /* Adjusted width */
+  max-width: 240px; /* Maximum width */
+  align-self: center;
+}
+
+.content > * {
+  align-self: center;
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 980px) {
+  .qrcodeComponent {
+    width: 40%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 568px) {
+  .qrcodeComponent {
+    width: 80%;
+    max-width: 100%;
+  }
+}
